@@ -99,7 +99,7 @@ function displayAllPosts() {
 
 // Calculate reading time based on word count
 function calculateReadingTime(content) {
-    const wordsPerMinute = 200;
+    const wordsPerMinute = 150;
     const wordCount = content.split(' ').length;
     return Math.ceil(wordCount / wordsPerMinute);
 }

@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add estimated reading time to browser tab
     setTimeout(() => {
         if (currentPost) {
-            const readingTime = Math.ceil(currentPost.content.split(' ').length / 200);
+            const readingTime = Math.ceil(currentPost.content.split(' ').length / 150);
             document.title = `${currentPost.title} (${readingTime} min read) - oPeras Blog`;
         }
     }, 1000);
