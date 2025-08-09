@@ -1,0 +1,36 @@
+services:
+  operas:
+    image: nginx:alpine
+    container_name: operas-main
+    restart: unless-stopped
+    ports:
+      - "4080:80"  # Expose on host port 4080
+    volumes:
+      - ./operas.pt:/usr/share/nginx/html:ro  # Mount your HTML folder
+
+  blog-operas:
+    image: nginx:alpine
+    container_name: operas-blog
+    restart: unless-stopped
+    ports:
+      - "4081:80"  # Expose on host port 4081
+    volumes:
+      - ./blog.operas.pt:/usr/share/nginx/html:ro  # Mount your HTML folder
+
+  mail-operas:
+    build:
+      context: ./mail.operas.pt
+      dockerfile: Dockerfile
+    ports:
+      - "4082:8080"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - SMTP_SERVER=${SMTP_SERVER}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - RECIPIENT_EMAIL=${RECIPIENT_EMAIL}
+      - PORT=${PORT}
+    restart: unless-stopped

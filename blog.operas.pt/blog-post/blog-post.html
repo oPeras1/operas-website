@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Blog Post - oPeras Blog</title>
+    <link rel="stylesheet" href="blog-post.css">
+</head>
+<body>
+    <div class="article-container">
+        <header class="article-header">
+            <div class="header-content">
+                <nav class="article-nav">
+                    <a href="https://blog.operas.pt" class="nav-link back-link">
+                        <span>←</span>
+                        Blog's Main Page
+                    </a>
+                    <a href="https://operas.pt" class="nav-link home-link">
+                        Personal Page
+                    </a>
+                </nav>
+                <div class="author-info">
+                    <div class="author-avatar">👨‍💻</div>
+                    <div class="author-details">
+                        <span class="author-name">Hugo Pereira</span>
+                        <span class="author-title">Computer Science Student</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <main class="article-main">
+            <article class="blog-article">
+                <div class="article-meta">
+                    <span class="article-date" id="articleDate">Loading...</span>
+                    <span class="reading-time" id="readingTime">Loading...</span>
+                    <span class="article-tags" id="articleTags"></span>
+                </div>
+                
+                <h1 class="article-title" id="articleTitle">Loading article...</h1>
+                
+                <div class="article-content" id="articleContent">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <p>Loading article content...</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article Footer -->
+            <footer class="article-footer">
+                <!-- Will anyone even share this??
+                <div class="share-section">
+                    <h3 class="share-title">Share this article</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareOnTwitter()">
+                            <span class="share-icon">🐦</span>
+                            <span class="share-text">Twitter</span>
+                        </button>
+                        <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
+                            <span class="share-icon">💼</span>
+                            <span class="share-text">LinkedIn</span>
+                        </button>
+                        <button class="share-btn copy" onclick="copyLink()">
+                            <span class="share-icon">🔗</span>
+                            <span class="share-text">Copy Link</span>
+                        </button>
+                    </div>
+                </div>-->
+                
+                <div class="author-section">
+                    <div class="author-card">
+                        <div class="author-avatar-large">👨‍💻</div>
+                        <div class="author-info-detailed">
+                            <h4>About me</h4>
+                            <p>I am a Computer Science Engineering student at Instituto Superior Técnico, passionate about technology, development, and innovation. Currently working as a Research Fellow at DEI.</p>
+                            <div class="author-links">
+                                <a href="https://operas.pt/" class="author-link">View my Main Page</a>
+                                <a href="https://operas.pt/#contact" class="author-link">Get in Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navigation-section">
+                    <div class="nav-links">
+                        <a href="https://blog.operas.pt" class="nav-link-large">
+                            <span class="nav-icon">←</span>
+                            <div class="nav-text">
+                                <span class="nav-label">Back to</span>
+                                <span class="nav-title">All Articles</span>
+                            </div>
+                        </a>
+                        <div class="related-posts" id="relatedPosts">
+                            <div class="loading">Loading related posts...</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="blog-post.js"></script>
+</body>
+</html>
