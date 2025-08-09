@@ -23,8 +23,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4082:8080"
-    env_file:
-      - .env
     environment:
       - FLASK_ENV=production
       - SMTP_SERVER=${SMTP_SERVER}
