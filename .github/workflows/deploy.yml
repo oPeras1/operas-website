@@ -44,3 +44,10 @@ jobs:
 
           docker compose build --no-cache
           docker compose up -d
+      env:
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SMTP_USER: ${{ secrets.SMTP_USER }}
+        SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        PORT: ${{ secrets.PORT }}
