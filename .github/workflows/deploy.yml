@@ -30,16 +30,16 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/operas
+          cd ~/operas-website
           git pull origin main
           docker compose down
 
-          export SMTP_SERVER="${{ secrets.SMTP_SERVER }}"
-          export SMTP_PORT="${{ secrets.SMTP_PORT }}"
-          export SMTP_USER="${{ secrets.SMTP_USER }}"
-          export SMTP_PASS="${{ secrets.SMTP_PASS }}"
-          export RECIPIENT_EMAIL="${{ secrets.RECIPIENT_EMAIL }}"
-          export PORT="${{ secrets.PORT }}"
+          export SMTP_SERVER=${{ secrets.SMTP_SERVER }}
+          export SMTP_PORT=${{ secrets.SMTP_PORT }}
+          export SMTP_USER=${{ secrets.SMTP_USER }}
+          export SMTP_PASS=${{ secrets.SMTP_PASS }}
+          export RECIPIENT_EMAIL=${{ secrets.RECIPIENT_EMAIL }}
+          export PORT=${{ secrets.PORT }}
 
 
           docker compose build --no-cache
